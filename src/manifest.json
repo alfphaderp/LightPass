@@ -1,0 +1,10 @@
+{
+	"name": "LightPass",
+	"version": "0.2.1",
+	"description": "A simple, lightweight, stateless password manager.",
+	"manifest_version": 2,
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_popup": "popup.html"
+	}
+}

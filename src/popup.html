@@ -1,0 +1,48 @@
+<!doctype html>
+	<body>
+		<h1 style="display: inline">LightPass</h1>
+		<p style="display: inline">0.2.1 alpha</p>
+    <button id="toggle" style="display: inline">Show Options</button>
+		<form id="form">
+			<fieldset>
+				<legend>Information</legend>
+				<label for="fqdn">Website Name:</label><input type="text" id="fqdn">
+				<label for="light">Your LightPass:</label><input type="password" id="light" autofocus>
+			</fieldset>
+			<div id="options" style="display: none;">
+				<fieldset>
+					<legend>Character Sets</legend>
+					<div style="text-align: center">
+						<table>
+							<tr style="text-align: left">
+								<td><input type="checkbox" id="lower" checked><label for="lower">Lowercase</label></td>
+								<td><input type="checkbox" id="upper" checked><label for="upper">Uppercase</label></td>
+							</tr>
+							<tr style="text-align: left">
+								<td><input type="checkbox" id="numbers" checked><label for="numbers">Numbers</label></td>
+								<td><input type="checkbox" id="symbols" checked><label for="symbols">Symbols</label></td>
+							</tr>
+						</table>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Length</legend>
+					<div style="text-align: center">
+						<input type="radio" name="length" value=8 id="8"><label for="8">8</label>
+						<input type="radio" name="length" value=16 id="16"><label for="16">16</label>
+						<input type="radio" name="length" value=24 id="24"><label for="24">24</label>
+						<input type="radio" name="length" value=32 id="32" checked><label for="32">32</label>
+					</div>
+				</fieldset>
+			</div>
+		</form>		
+		<div style="text-align: center">
+			<label for="pass">Your Secure Generated Password:</label>
+			<input type="text" id="pass" size="14" readonly>
+			<button id="copy" style="width:60px;">Copy</button>
+		</div>
+    <script src="node_modules/argon2-browser/lib/argon2.js"></script>
+		<script src="convert.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>
